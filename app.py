@@ -20,8 +20,8 @@ logging.basicConfig(filename='log.txt', level=logging.INFO, format='%(asctime)s 
 logger = logging.getLogger(__name__)
 
 load_dotenv()
-os.environ['APIKEY'] = "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"
-os.environ['assistant'] = "asst_E6r6COQ8n9x2llpvUTzi5czZ"
+api= os.getenv('APIKEY')
+assis = os.getenv("assistant")
 
 
 api= os.getenv('APIKEY')
