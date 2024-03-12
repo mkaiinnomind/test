@@ -1,20 +1,8 @@
-from flask import Flask, request, jsonify,render_template ,request, redirect, url_for
-import json
-import random
-import uuid
-from openai import OpenAI
-from collections import Counter
-import os
-import pandas as pd
-from flask_cors import CORS
-import time
-import logging
-from dotenv import load_dotenv
-import os
+from flask import Flask
 
 app = Flask(__name__)
-CORS(app, resources={"*": {"origins": "*"}})
 
+<<<<<<< HEAD
 logging.basicConfig(filename='log.txt', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 logger = logging.getLogger(__name__)
@@ -397,3 +385,11 @@ def post_check():
 
 if __name__ == '__main__':
     app.run(port=3001)
+=======
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
+
+if __name__ == '__main__':
+    app.run(threaded=True, port=5000)
+>>>>>>> parent of f492bdf (Makilio Code API)
